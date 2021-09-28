@@ -1,0 +1,37 @@
+COMMANDE LINUX lab2
+
+LAB 2 :
+
+1/ mkdir
+
+2/ echo "hello M2 syscom"> MEHRAZ   %écrire un texte sur un fichier
+
+3/ git init
+
+4/ git status
+
+5/ git add MEHRAZ
+
+6/ git commit -m "[Mettre votre message initiale"]
+
+7/ J'ai fais une erreur en mettant git remote add origin [https://github.com/Myssipsa/Lab2.git] avec les braquettes, donc j'utilise la commande git remote -v pour visualiser la liste des remote repository et la commande git remote rm https://github.com/Myssipsa/Lab2.git pour supprimer, ce qui n'a pas marché. J'ai mis alors git remote rm origin, ce qui a marché.
+
+10/ git pull
+
+11/ cd /home 
+    git clone https://github.com/Myssipsa/Lab2.git	 ==> permission denied 
+    sudo git clone https://github.com/Myssipsa/Lab2.git  ==> Validé
+
+12/ cd Desktop/ 
+    mkdir mu5sp05-part1
+    cd mu5sp05-part1
+    mkdir lab3 lab4 lab5 lab6 lab7 lab8 lab9 lab10
+
+    git init
+    git remote add origin git remote add origin https://    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@github.com/Myssipsa/mu5sp05-part1.git
+    git push -u origin new_branch
+
+
+
+
+    	

@@ -1,0 +1,82 @@
+COMPTE RENDU LAB3
+----------------------------------------------------------------------------------------------------
+
+3/ git clone <URL>
+
+4/ ls -lrt (ou ls -l) révèle qu'il y a 3 fichier un répértoire.
+   ls -l -h affiche la taille des fichiers avec un suffixe correspondant à l'unité (K,M,G)
+
+    Taille totale = 116k
+    Taille answering-machine.txt = 69K
+    Taille Microsoft = 34K
+    Taille README.md = 31Octets
+    Taille du répertoire Sradar = 4.0K
+
+    On remarque que l'addition des tailles de chaque fichier et répertoire ne donnent pas     		 116K totale.
+
+5/ Avec la commande ls -h -l la taille totale du repertoire sardar est de 108K, il contient 3 fichiers de tailles : sardar1 = 14K sardar2= 5.9K sardar3 = 81K. La taille totale n'est pas 108K, ceci est du au fait que la commande affiche la taille de l'inode qui pointe vers sardar.
+
+6/ ls -h -l Microsoft : La taille du fichier Microsoft affiché par la cmd ls est de 34K
+   du -h Microsoft    : La taille du fichier Microsoft affiché par la cmd du est de 36K
+
+   La commande Ls affiche la taille exacte des fichiers en bytes, par contre la commande du affiche la taille occupé par le fichier dans l'espace disk. Cette espace est toujours un peu plus large que la taille du fichier lui même. D'ou la difference.
+
+7/ stat Microsoft 
+   inode : 1063791
+
+8/ ls -a le fichier caché est le fichier .lightbulb
+
+9/ ls -t -r affiche les fichiers du plus ancien au plus récent
+
+10/ ls -s -r affiche les fichiers de la plus petite taille à la plus grande selon l'espace disque
+    ls -rl -sort=size affiche les fichiers de la plus petite taille à la plus grande selon la taille exacte de chaque fichier.
+
+11/  cd /$HOME cd lab3
+     cat answering-machine.txt    affiche tout le contenu du fichier
+
+12/ more answering-machine.txt   affiche le contenu du fichier par appuie sur bouton
+
+13/ sudo apt install vim (après rebootage de l'ordinateur)
+
+14/ vim answering-machine.txt ouvre le fichier dans le vim
+    G pour aller à la derniere ligne du fichier
+    o inserer une ligne apres la ligne courante (donc la derniere ligne pour moi)
+
+15/ /gravelly cherche le mot gravelly
+     Entrée puis dw pour supprimer le mot
+
+16/ :w! sauvegarder le fichier
+
+17/ /planet puis entrée et ensuite n
+
+19/ ?BEEP chercher la derniere occurence du mot BEEP
+    on parcourt avec la commande n
+
+20/ cd /$HOME cd lab3 cd sardar
+    tail -n20 sardar3.txt afficher les 20 dernieres lignes
+
+21/ grep trust Microsoft
+
+22/ grep -r money ./
+
+23/ grep -ri money ./
+
+24/ mv .lightbulb lightbulb
+
+25/ pwd affiche //home/student/lab3/sardar
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
