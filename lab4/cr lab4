@@ -1,0 +1,35 @@
+CR - LAB4
+-------------------------------------------------------------------------------------------------
+1/ git clone "lien"
+
+2/ history
+
+3/ history > history.txt
+
+4/ cat ./sardar/* >> sardar_power.txt
+
+
+
+5/ wc -l sardar_power.txt nombre de ligne 1980
+   wc -w sardar_power.txt nombre de mots 16783
+
+6/ grep -r singh sardar_power.txt
+
+7/ rm sardar_power.txt
+
+8/ grep -ri singh sardar/*
+
+9/ grep -ri singh sardar/* | wc -l  le | sert à relier la commande d'apres à la commande d'avant.
+
+10/ grep -ri singh sardar/* | grep -ri santa  | wc -l Nombre de lignes 114
+
+11/ grep -ri singh sardar/* | grep -ri santa  | grep -vi "banta"| wc -l Nombre de lignes 76
+
+12/ find . "*.txt" 
+
+13/ cat answering-machine.txt >> test_commande_locate.txt
+
+14/
+
+
+

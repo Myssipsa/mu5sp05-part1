@@ -1,0 +1,451 @@
+    1  q
+    2  a
+    3  aa
+    4  a
+    5  aa
+    6  sudo apt-get install vim
+    7  sudo apt install libssl-dev bison flex
+    8  sudo apt install qt5-default pkg-config
+    9  ls
+   10  *
+   11  ls
+   12  time
+   13  ls
+   14  time
+   15  date
+   16  ls
+   17  date
+   18  ls
+   19  *
+   20  ls
+   21  cd Desktop/
+   22  ls
+   23  *
+   24  ls
+   25  sudo apt install git gitk git-email
+   26  sudo reboot
+   27  sudo apt install git gitk git-email
+   28  git config --global user.name"[Myssipsa]"
+   29  git config --global user.name"Myssipsa"
+   30  git config --global user.name"myssipsa.mehraz@etu.sorbonne-universite.fr"
+   31  git config --global user.name
+   32  clc
+   33  clear
+   34  git config --global user.name"[myssipsa]"
+   35  git config --global user.name "[myssipsa]"
+   36  git config --global user.email [myssipsa.mehraz@etu.sorbonne-universite.fr]
+   37  git config --global user.name
+   38  git config --global user.email
+   39  mkdir Lab2
+   40  cd Lab2
+   41  touch hello M2 syscom
+   42  rm hello M2 syscom
+   43  touch MEHRAZ
+   44  echo "hello M2 syscom">MEHRAZ
+   45  git init
+   46  git status
+   47  git status .git
+   48  git status MEHRAZ
+   49  git status 
+   50  git add
+   51  git add MEHRAZ
+   52  git status
+   53  git commit -m ["Mettre votre message initial"]
+   54  git remote add origin [https://github.com/Myssipsa/Lab2.git
+   55  git push -u origin main
+   56  git remote add origin https://github.com/Myssipsa/Lab2.git
+   57  git push -u origin main
+   58  git branch -M main
+   59  git push -u origin main
+   60  clear
+   61  git remote add origin https://github.com/Myssipsa/Lab2.git
+   62  git branch -M main
+   63  git push -u origin main
+   64  git remote rm [https://github.com/Myssipsa/Lab2.git]
+   65  clear
+   66  git remote add origin https://github.com/Myssipsa/Lab2.git
+   67  git branch -M main
+   68  git push -u origin main
+   69  git remote -v
+   70  git remote rm [https://github.com/Myssipsa/Lab2.git (fetch)
+   71  git remote rm [https://github.com/Myssipsa/Lab2.git
+   72  git remote rm [https://github.com/Myssipsa/Lab2.git]
+   73  git remote rm [https://github.com/Myssipsa/Lab2.git
+   74  git remote rm https://github.com/Myssipsa/Lab2.git
+   75  git remote -v
+   76  git remote remove origin
+   77  git remote -v
+   78  git remote add origin https://github.com/Myssipsa/Lab2.git
+   79  git branch -M main
+   80  git push -u origin main
+   81  clear 
+   82  git branch -M main
+   83  git push -u origin main
+   84  git remote rm origin
+   85  git remote add origin https://.com/Myssipsa/Lab2.git
+   86  git remote add origin https://
+   87  git remote rm origin
+   88  git remote add origin https://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@github.com/Myssipsa/Lab2.git 
+   89  git branch -M main
+   90  git push -u origin main
+   91  git pull 
+   92  cd $HOME
+   93  Home
+   94  cd/home/
+   95  cd /home
+   96  git clone https://github.com/Myssipsa/Lab2.git
+   97  cd ~/
+   98  git clone https://github.com/Myssipsa/Lab2.git
+   99  cd /home
+  100  git clone https://github.com/Myssipsa/Lab2.git
+  101  sudo git clone https://github.com/Myssipsa/Lab2.git
+  102  cd Desktop
+  103  cd Desktop/
+  104  cd /Desktop
+  105  pwd
+  106  cd..
+  107  cd
+  108  cd Desktop
+  109  mkdir mu5sp05-part1
+  110  cd mu5sp05-part1
+  111  mkdir lab3 lab4 lab5 lab6 lab7 lab8 lab9 lab10
+  112  cd..
+  113  cd
+  114  echo "toto" >lab3
+  115  cd Desktop/:mu5sp05-part1
+  116  cd Desktop/:mu5sp05-part1/
+  117  cd Desktop/
+  118  mu5sp05-part1
+  119  cd mu5sp05-part1/
+  120  cd lab3/
+  121  echo"">toto
+  122  cd
+  123  cd $HOME
+  124  pwd
+  125  git clone https://github.com/Myssipsa/Lab2.git
+  126  git branch -M main
+  127  git push -u origin master
+  128  git remote add origin https://github.com/Myssipsa/mu5sp05-part1.git
+  129  git branch -M main
+  130  clear
+  131  cd Desktop/
+  132  cd mu5spà5-part1
+  133  cd mu5spà5-part1/
+  134  cd mu5sp05-part1/
+  135  git remote add origin https://github.com/Myssipsa/mu5sp05-part1.git
+  136  git status
+  137  ls
+  138  git init
+  139  git remote -v
+  140  git status
+  141  git remote add origin https://github.com/Myssipsa/mu5sp05-part1.git
+  142  git remote -v
+  143  git branch -M main
+  144  clear
+  145  git remote -v
+  146  get init
+  147  git init
+  148  git branch -M main
+  149  clear
+  150  get init
+  151  git init
+  152  git remote add origin https://github.com/Myssipsa/mu5sp05-part1.git
+  153  git branch -M main
+  154  git checkout -b new_branch
+  155  git branch -M main
+  156  git branch -a
+  157  ls .git
+  158  ls
+  159  cd lab2
+  160  mv -r Lab2 lab2
+  161  mv -r ./Lab2 lab2
+  162  ls
+  163  mv Lab2 lab2
+  164  ls
+  165  cd lab3
+  166  ls
+  167  cd ..
+  168  ls
+  169  cd lab2
+  170  ls
+  171  ls .git
+  172  rm -r .git
+  173  rm -rf .git
+  174  ls
+  175  ls .git 
+  176  cd ..
+  177  ls
+  178  cd lab3
+  179  ls
+  180  ls .git
+  181  ls
+  182  cd ..
+  183  ls
+  184  cd lab4
+  185  ls
+  186  cd ..
+  187  ls
+  188  ls lab2
+  189  ls .git
+  190  ls
+  191  git add .
+  192  ls
+  193  git status
+  194  git branch -a
+  195  git branch 
+  196  git branch -all
+  197  ls
+  198  git commit -m "test"
+  199  git branch -a
+  200  git remote add origin https://github.com/Myssipsa/mu5sp05-part1.git
+  201  git push -u origin new_branch
+  202  git remove origin
+  203  git remote (v
+  204  git remote -v
+  205  git push -u origin main
+  206  git rm https://github.com/Myssipsa/mu5sp05-part1.git
+  207  git branch 
+  208  git remove origin
+  209  git remote rm origin
+  210  git remote -v
+  211  git init
+  212  git remote add origin https://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@github.com/Myssipsa/mu5sp05-part1.git
+  213  git push -u origin new_branch
+  214  git status
+  215  git clone https://github.com/khachicha/lab3.git
+  216  cd $HOME
+  217  cd HOME
+  218  cd /$HOME
+  219  ls
+  220  cd lab3
+  221  cd
+  222  cd/$HOME
+  223  cd /$HOME
+  224  cp lab3 ~Desktop/mu5sp05-part1
+  225  clear 
+  226  cd lab3
+  227  ls -lrt
+  228  ls
+  229  ls -l
+  230  ls -h -l
+  231  cd sardar
+  232  ls
+  233  ls -h -l
+  234  ls Microsoft
+  235  ls -a
+  236  cd..
+  237  cd ..
+  238  ls Microsoft
+  239  ls -h -l Microsoft
+  240  du -h Microsoft
+  241  ls -l
+  242  ls -sh
+  243  stat Microsoft
+  244  ls -a
+  245  rm -rf .git
+  246  ls -a
+  247  ls -lct
+  248  ls -lart
+  249  ls -t
+  250  ls -s
+  251  ls -t -r
+  252  ls -s -r
+  253  cat answering-machine.txt
+  254  ls -ltr
+  255  ls -t -r
+  256  ls -ltr --sort=size
+  257  ls -rl --sort=size
+  258  ls -rl --sort=time
+  259  more answering-machine.txt
+  260  sudo apt install vim
+  261  apt-get install vim
+  262  sudo apt-get install vim
+  263  n
+  264  clear
+  265  sudo apt install vim
+  266  sudo apt-get install vim
+  267  sudo apt install vim
+  268  cd /$HOME
+  269  cd lab3
+  270  vim answering-machine.txt
+  271  cd /$HOME
+  272  cd lab3
+  273  vim answering-machine.txt
+  274  cd sardar
+  275  vim sardar3.txt
+  276  tail sardar3.txt
+  277  tail -n20 sardar3.txt
+  278  cd ..
+  279  grep trust Microsoft
+  280  grep trust
+  281  cd /$HOME
+  282  cd lab3
+  283  grep money *
+  284  cd sardar
+  285  grep money *
+  286  clear
+  287  grep -r money ./
+  288  cd ..
+  289  grep -r money ./
+  290  grep -ri money ./
+  291  clear
+  292  mv .lightbulb lightbulb
+  293  ls -a
+  294  grep -i money ./
+  295  cd sardar
+  296  pwd
+  297  cd
+  298  /$HOME
+  299  cd /$HOME
+  300  cd mu5sp05-part1
+  301  cd Desktop
+  302  cd mu5sp05-part1
+  303  git status
+  304  git add .
+  305  git status
+  306  git commit -m "Quest 25 / lab3"
+  307  git status
+  308  git push 
+  309  close
+  310  clear
+  311  exit
+  312  cd $HOME
+  313  cd /$HOME
+  314  cd mu5sp05-part1
+  315  cd lab3
+  316  ls 
+  317  ls -a
+  318  cd sardar
+  319  ls -a
+  320  mv sardar3.txt lab3
+  321  ls-a
+  322  ls -a
+  323  cd ..
+  324  ls -a
+  325  cd ..
+  326  ls- a
+  327  ls -a
+  328  find mu5sp05-part1
+  329  cd mu5sp05-part1
+  330  cd lab3
+  331  pwd
+  332  cd sardar
+  333  ls- a
+  334  ls -a
+  335  clear
+  336  cd ..
+  337  cd Desktop
+  338  ls- a
+  339  ls -a
+  340  cd mu5sp05-part1
+  341  ls -a
+  342  cd lab3
+  343  ls -a
+  344  cd sardar
+  345  ls -a
+  346  mv sardar3.txt /home/student/Desktop/mu5sp05-part1/lab3
+  347  ls -a
+  348  cd ..
+  349  ls -a
+  350  cd ..
+  351  rm Microsoft
+  352  cd lab3
+  353  ls -a
+  354  rm Microsoft
+  355  ls -a
+  356  tar cvf archive_lab3 answering-machine.txt .answering-machine.txt.swp 'cr-lab3' lightbulb READ.md sardar sardar3.txt tot
+  357  ls -a
+  358  clear 
+  359  tar -cvf lab3.tar lab3
+  360  ls -a
+  361  rm lab3.tar 
+  362  rm archive_lab3
+  363  clear
+  364  cd..
+  365  cd ..
+  366  tar -cvf lab3.tar lab3
+  367  cd lab3
+  368  ls -a
+  369  cd .;
+  370  cd ..
+  371  mv lab3.tar /home/student/Desktop/mu5sp05-part1/lab3
+  372  ls -a
+  373  cd lab3
+  374  ls -a
+  375  cd ..
+  376  ln -s answering-machine.txt 'cr -lab3' lightbulb sardar toto lab3.tar README.md sardar3.txt /home/student/Desktop/mu5sp05-part1
+  377  ls -a
+  378  cd lab3
+  379  cd sardar
+  380  rm sardar2.txt
+  381  ls -a
+  382  cd ..
+  383  ls -a
+  384  cd lab3
+  385  cd sardar
+  386  ln -s sardar1.txt sardar2.txt /home/student/Desktop/mu5sp05-part1/lab3
+  387  cd ..
+  388  ls -a
+  389  cd sardar
+  390  rm sardar2.txt
+  391  cd ..
+  392  ls -a
+  393  cd sardar
+  394  ls -a
+  395  cd ..
+  396  clear
+  397  ls -l
+  398  cd sardar
+  399  chmod -rwx sardar1.txt
+  400  ls -l
+  401  chmod +r sardar1.txt
+  402  ls -l
+  403  vim sardar1.txt
+  404  vim sardar.txt
+  405  vim sardar1;txt
+  406  vim sardar1.txt
+  407  ls -l sardar1.txt
+  408  cd ..
+  409  ls -a
+  410  bzip2 lab3.tar
+  411  ls -a
+  412  zless lab3.tar.bz2
+  413  clear
+  414  ls -a
+  415  ls -l
+  416  chmod -wx sardar1.txt
+  417  cd sardar
+  418  ls -l
+  419  chmod +w sardar1.txt
+  420  ls -l
+  421  cd ..
+  422  zmore lab3.tar.bz2
+  423  ls -lrt
+  424  cd sardar
+  425  ls -lrt
+  426  chmod -w sardar1.txt
+  427  ls -lrt
+  428  vim sardar1.txt
+  429  cd ..
+  430  tar tvf lab3.tar.bz2
+  431  clear
+  432  git clone
+  433  cd ..
+  434  git clone https://github.com/khachicha/lab4.git
+  435  ls -a
+  436  cd lab4
+  437  ls -a
+  438  rm .git
+  439  rm -r .git
+  440  ls -a
+  441  ls -la
+  442  rm -r .git
+  443  y
+  444  rm -r .git
+  445  ls -la
+  446  rm -r .git
+  447  clear
+  448  history
+  449  clear
+  450  history
+  451  history > history.txt

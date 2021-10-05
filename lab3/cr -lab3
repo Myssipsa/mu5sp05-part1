@@ -65,6 +65,60 @@ COMPTE RENDU LAB3
 
 25/ pwd affiche //home/student/lab3/sardar
 
+26/ mv sardar3.txt /home/student/Desktop/mu5sp05-part1/lab3 
+
+27/ cd..
+
+28/ rm Microsoft
+
+29/ tar -cvf lab3.tar lab3 ( créer une archive lab3.tar avec tous les fichiers et répértoires se trouvant dans lab3 )
+
+30/ ln -s sardar1.txt sardar2.txt /home/student/Desktop/mu5sp05-part1/lab3
+
+31/ les liens symboliques sont en couleur (rouge).
+
+32/ le lien du fichier sardar2.txt existe toujours
+
+33/ chmod -rwx sardar1.txt 
+    chmod +r sardar1.txt 
+    :w
+    La modification ne se fait pas, par contre je peux faire :w§ pour forcer l'enregistrement vu que je suis le propriétaire du fichier.
+
+34/ chmod +w sardar1.txt 
+    L'enregistrement se fait normalement
+
+36/ bzip2 lab3.tar
+
+37/ tar tvf lab3.tar.bz2 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
