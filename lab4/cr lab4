@@ -29,7 +29,36 @@ CR - LAB4
 
 13/ cat answering-machine.txt >> test_commande_locate.txt
 
-14/
+    locate test_commande_locate.txt me donne /home/student/Desktop/mu5sp05-part1/lab4/test_commande_locate.txt
 
+14/ Après avoir utiliser updatedb, la commande locate me redonne le meme chemin que dans la question 14
+
+Cependant, la base de donnée ne devant pas être à jour à la question 14, normalement le locate n'aurait pas du trouver le chemin vers test_commande_locate.txt, et logiquement ce n'est qu'après le updatedb que locate aurait due marcher.
+
+15/ diff noyau.v1 noyau.v2
+    La différence entre les deux fichier est    25,26c25,26
+						< PATCHLEVEL = 01
+						< SUBLEVEL = -rc1
+						---
+						> PATCHLEVEL = 02
+						> SUBLEVEL = -rc2
+						54c54
+						< export	SHELL CC GCC
+						---
+						> export	SHELL 
+
+	
+     Valeur de patchlevel et de sublevel sur les lignes 25(fichier1) et 26(fichier2), et export sur les lignes 54.
+
+16/ sudo apt install tkdiff
+    tkdiff nous montre directement les différence entre les deux fichiers dans une fenetre séparé en deux, fichier 1 et fichier 2, et en surlignant ces différences, ce qui permet de mieux visualiser le fichier et de mieux repérer les erreurs.
+
+17/ diff noyau.v1 noyau.v2 >> update.patch 
+    patch noyau.v1<updated.patch
+    
+    quand je refais un diff entre les deux fichiers il n'y aucune différence d'affiché.
+
+
+    
 
 

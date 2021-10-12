@@ -1,0 +1,32 @@
+CR - LAB 5
+------------------------------------------------------------------------------------------------------------------------------------------
+
+1/ cat>master.sh créer un fichier master de type .sh
+   #/bin/sh 	 permet de choisir le type de shell bin
+   ls -a ../lab4 liste tous les fichier contenu dans lab4
+   locate lab4 affiche la localisation de lab4 et la localisation de tous les fichiers qu'il contient.
+   
+   master_syscom="Hello Embedded Linux"
+   chmod u+rx master.sh  le shell doit etre lisible et executable.
+   
+   on execute ainsi : ./master.sh
+
+2/ cat>2ndShell.sh
+   #!/bin/sh
+   
+   CTRL + D 
+   vim 2ndShell.sh
+   if [ $1 -gt $2 ]
+   then 
+        echo " num1 est supérieur à num2"
+   elif [ $1 -lt $2 ]
+   then
+        echo " num1 est inférieur à num2"
+   else 
+        echo "Les deux nombres sont égaux"  
+   fi
+
+
+  pour tester : ./2ndShell.sh 7 4 etc....
+
+3/
