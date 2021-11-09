@@ -16,6 +16,7 @@ CR - LAB 5
    
    CTRL + D 
    vim 2ndShell.sh
+   i
    if [ $1 -gt $2 ]
    then 
         echo " num1 est supérieur à num2"
@@ -25,8 +26,58 @@ CR - LAB 5
    else 
         echo "Les deux nombres sont égaux"  
    fi
-
+   escape
+   :wq
 
   pour tester : ./2ndShell.sh 7 4 etc....
 
-3/
+3/ cat>3rdShell.sh
+   #!/bin/sh
+   
+   CTRL + D
+   vim 3rdShell.sh
+   i
+   cd ..;cd lab4			On sort du dossier lab5 pour aller dans le dossier lab4
+   for i in `ls -a`;do
+   	if [ -d $i ]
+   	then 
+   		echo "$i"
+   	fi
+   done
+   escape
+   :wq
+   
+   pour tester : ./3rdShell.sh
+   
+4/ vim 3rdShell.sh
+   i
+   
+   cd $1
+   
+   for i in `ls -a`;do
+   	if [ -d $i ]
+   	then 
+   		echo "$i"
+   	fi
+   done
+   
+   escape
+   :wq
+   
+   
+5/ vim 3rdShell.sh
+   i
+   
+   cd $1
+   
+   if [ -d $1 ]
+   then
+   	for i in `ls -a`; do
+   		if [-d $i ]
+   		then
+   			echo "$i"
+   		fi
+   	done
+   else
+   	echo "Le répértoire indiqué n'est pas valide"
+   fi

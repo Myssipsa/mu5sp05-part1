@@ -1,11 +1,17 @@
-#!/bin/sh
-$var = /home/
+#/bin/sh
 
-for i in ls lab4
-do
-	if [ -d $i]
-	then	
-		echo"$i est un dossier"
+cd $1
 
-	fi
-done
+if [ -d $1 ]
+then
+	for i in `ls -a`; do
+		if [ -d $i ]
+		then
+			echo "$i"
+		fi
+	done
+else
+	echo "Le répértoire indiqué n'est pas valide"
+
+fi
+
