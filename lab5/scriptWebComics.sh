@@ -1,16 +1,15 @@
+
 #!/bin/sh
 i=1
 while [ $i -le 10 ]
 do
 
-	wget -P $HOME/Desktop/M2_SysCom_2021/Modules/Systèmes_Embarqués/TPs/mu5sp05-part1/lab5 https://xkcd.com/$i
+	wget -p  https://xkcd.com/$i/
 
-	wget -P $HOME/Desktop/M2_SysCom_2021/Modules/Systèmes_Embarqués/TPs/mu5sp05-part1/lab5 `grep hotlinking $i` 
-	
-	
-	
-	
+	url=`grep hotlinking xkcd.com/$i/index.html | cut -d '"' -f 2`
+
+	wget -p $url
 	
 	i=`expr $i + 1`
-        echo "$i"	
+        	
 done

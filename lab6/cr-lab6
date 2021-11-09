@@ -1,0 +1,59 @@
+cr-lab6
+------------------------------------------------------------------------------------------------------------------------------------------
+
+1/ env %Affiche toutes les variables d'environnements de mon système; on peut aussi utiliser printenv
+	
+   printenv HOME    %Affiche /home/student
+
+
+2/ printenv PATH ou echo $PATH %Affiche /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+   
+   Spécifie l'ordre de recherche de commandes pour le shell, la recherche se fait dans l'ordre des répertoires contenus dans la variable PATH. Dès que le shell trouve la commande, alors il stoppe la recherche en exécutant la commande trouvée.
+
+
+3/ cat>listeProcessus.sh
+
+   CTRL + D   	%Pour quitter
+
+   vim listeProcessus.sh
+   i
+
+   #!/bin/sh
+ 
+   ps -aux
+ 
+   échap
+   :wq 
+
+   chmod u+rx listeProcecessus.sh
+      	
+   ./listeProcessus.sh
+
+
+4/ sudo mv listeProcessus.sh /opt
+
+5/ On rajoute le répertoire ou se trouve le script (/opt) dans PATH 
+   export PATH = /opt:$PATH	
+
+   Maintenant on peut executer listeProcessus.sh depuis n'importe quel répertoire en tapant juste son nom 
+   listeProcessus.sh
+
+6/ La commande de ne s'éxecute pas
+   En vérifiant PATH par echo "PATH" je vois que le répértoire (/opt) que j'avais ajouté n'y est plus !!!
+
+7/ Le fichier script qui s'éxecute automatiquement lors du démarrage d'un nouveau terminal est le .bashrc
+   donc on cherche celui-ci sur le bureau ls .bashrc
+   vim .bashrc
+   G % pour aller à la derniere ligne 
+   i
+   export PATH= /opt:$PATH
+   
+   On ferme le cmd et on le réouvre
+   On verifie que /opt a été ajouté à PATH
+   echo "$PATH" % confirmé
+   
+   on éxecute : listeProcessus.sh
+
+
+8/ Ca marche !
+
