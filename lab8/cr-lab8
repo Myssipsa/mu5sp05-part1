@@ -1,0 +1,111 @@
+cr-lab8
+------------------------------------------------------------------------------------------------------------------------------------------
+1/	pwd 
+	/home/student/mu5sp05-part1/lab8 
+
+	cp ../lab7/*.c .			%copie tout les fichiers .c
+	cp ../lab8/*.h .			%copie tous les fichiers .h
+
+2/     gcc -c max.c 
+       gcc -c min.c
+
+3/
+	ar -r liboutils.a max.o min.o		%Création d'une archive et mise de fichiers à l'intérieur
+	
+4/	
+	ar -t liboutils.a			%Affiche les fichiers dans liboutils.a 
+	affiche : max.o 
+		  min.o
+
+5/ 
+	ranlib liboutils.a			%Génère un index du contenu d'une archive, et le stocke dans l'archive.
+						%Accélère l'édition de lien avec la bibliothèque.
+
+6/
+	fichier main.c (à consulter sur le git)
+	
+	Demande la taille du tableau et quel valeur pour chaque case
+	affiche : La valeur min est : 1.
+		  La valeur max est :19.
+
+7/
+	sudo mkdir lib include
+
+8/
+	sudo mv /home/student/Desktop/mu5sp05-part1/lab8/min.h /opt/include
+	sudo mv /home/student/Desktop/mu5sp05-part1/lab8/max.h /opt/include
+	sudo mv /home/student/Desktop/mu5sp05-part1/lab8/liboutils.a /opt/lib
+
+9/
+	rm *.o
+	rm min.c max.c  
+	gcc main.c -L/opt/lib -I/opt/include -loutils -o lab8_Min_Max_execut
+
+10/
+
+	le fichier lab8_Min_Max_execut est bien généré dans lab8 et quand je l'éxecute j'ai bien le min et le max de mon tableau.
+
+11/	
+	je suis dans le dossier lab8
+	gcc -c var.c				%Génération du .o	
+	sudo mv var.o /opt/lib			%Déplacement var.o vers opt/lib
+	ar -r liboutils.a var.o			%Rajout de var.o dans la librairie
+	
+
+12/
+	ar -t liboutils.a			%Verification de la présence de var.o dans la librairie
+	affiche : max.o	
+		  min.o
+		  var.o
+
+
+13/	
+	ranlib liboutils.a 			%Mise à jour de l'index
+	nm -s liboutils.a			%Affichage des archive index et la présence des fichier .o
+	on affiche :
+	
+	Archive index:
+	maximum in max.o
+	minimum in min.o
+	variance in var.o
+
+	max.o:
+	0000000000000000 T maximum
+
+	min.o:
+	0000000000000000 T minimum
+
+	var.o:
+	0000000000000000 T variance
+
+14/
+
+	Rajout de la fonction var.c dans le main (à consulter sur le git)
+	
+	je suis dans le lab8
+	sudo mv var.h /opt/include			%copie de var.h dans le dossier include
+	
+	gcc main.c -L/opt/lib -I/opt/include -loutils -o lab8_Min_Max_execut 			%compiler et créer l'executable 
+	./lab8_Min_Max_execut
+
+15/
+
+	Rajout de ceil et floor pour var ( à consulter sur le git)
+	
+	gcc main.c -L/opt/lib -I/opt/include -loutils -o lab8_Min_Max_execut -lm		%compilation // Rajout de -lm pour le cmd reconnaissent les fonctions ceil et floor utilisé
+
+	./lab8_Min_Max_execut
+
+	affiche : La valeur min est : 1.
+ 		  La valeur max est : 5.
+ 		  La variance vaut : 2.000000 (arrondi supérieur) et vaut : 2.000000 (arrondi inférieur)
+
+	
+
+
+
+	
+	
+
+
+
