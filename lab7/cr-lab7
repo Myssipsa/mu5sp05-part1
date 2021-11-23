@@ -1,0 +1,56 @@
+cr-lab7
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1/ 3 fichiers crée testmax.c max.c max.h (à consulter sur le git)
+	
+	Lorsqu'on éxecute, on nous demande de rentrer la taille du tableau, puis la valeur de chaque case et ensuite il affiche le max.
+	
+	affiche : la valeur max est : 9.
+	
+2/ gcc -g max.c testmax.c    % Pour compiler et debogger le code
+   ls    	              % afficher le fichier compilé
+
+a.out  lab7-MU5SP05.pdf  max.c  max.h  test.c  test.i			%Qui est a.out
+
+a.out										%Pour éxecuter // Affichage correct
+
+
+
+3/ l'option -E Appelle le préprocesseur. N'effectue pas la compilation.
+   l'option -S Appelle le préprocesseur et effectue la compilation. N'effectue pas l'assemblage ni l'édition de lien. Seuls les fichiers assembleur (« .S ») sont générés.
+   l'option -c production du fichier objet (assemblage).
+   
+
+4 5 et 6/ Preprocesseur : test.i fichier source post-processé qui est un fichier texte qui sert d'étape de préprocess
+
+
+   Préprocessage : test.i fichier source post processé.		
+   Compilation : test.s fichier assembleur ( fait passer le .i en langage assembleur)
+   Assemblage : test.o fichier en binaire.  // $ gcc -c file.s
+  
+  
+  
+7 et 8/ fonction minimum en 3 fichiers min.h min.c testmin.c (à consulter sur le git)
+
+    Lorsqu'on éxecute, on nous demande de rentrer la taille du tableau, puis la valeur de chaque case et ensuite il affiche le min.
+    
+    affiche : la valeur min est : 2.
+   
+9/	fonction variance en 3 fichiers var.h var.c testvar.c (à consulter sur le git)
+
+	Lorsqu'on éxecute, on nous demande de rentrer la taille du tableau, puis la valeur de chaque case et ensuite il affiche la variance.
+   
+   	affiche : la variance vaut : 7.0000
+
+10/ Je reprend les 3 fonctions créer précedement et je créer une fonction testMinMaxVar.c qui m'affiche le min le max et la variance du tableau choisit.
+
+je compile ainsi gcc -g min.c max.c var.c testMinMaxVar.c
+
+puis ./a.out 
+
+Le programme demande la taille du tableau et la valeur de chaque case puis affiche le max min et la variance .
+
+
+affiche : La valeur min est : 0.
+          La valeur max est : 30.
+          La variance vaut : 55.000000.
+
