@@ -1,0 +1,30 @@
+cr-lab10
+----------------------------------------------------------------------------------------------------------------
+
+1/
+	commande cp
+	
+2/
+	nano lab10_makefile   			%Créer le fichier texte makefile
+	
+	Install : my-binaire			% cible : dépendances
+        cp my-binaire $(HOME) 		%      régle	
+
+	my-binaire : main.o min.o max.o var.o
+                  gcc -o my-binaire main.o var.o min.o max.o
+
+	max.o : max.c
+             gcc -Wall -c max.c
+	min.o : min.c
+             gcc -Wall -c min.c
+	var.o : var.c
+             gcc -Wall -c var.c
+        
+	main.o : main.c
+              gcc -Wall -c main.c
+        
+	clean : rm *.o
+	
+	
+3/
+

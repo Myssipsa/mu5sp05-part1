@@ -33,7 +33,7 @@ cr-lab6
 4/ sudo mv listeProcessus.sh /opt
 
 5/ On rajoute le répertoire ou se trouve le script (/opt) dans PATH 
-   export PATH = /opt:$PATH	
+   export PATH = $PATH:/opt	
 
    Maintenant on peut executer listeProcessus.sh depuis n'importe quel répertoire en tapant juste son nom 
    listeProcessus.sh

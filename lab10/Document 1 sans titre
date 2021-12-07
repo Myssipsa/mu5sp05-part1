@@ -1,0 +1,176 @@
+cr-lab10
+----------------------------------------------------------------------------------------------------------------
+
+1/
+	commande cp
+	
+2/
+	nano lab10_makefile   			%Créer le fichier texte makefile
+	
+	Install : my-binaire			% cible : dépendances
+        cp my-binaire $(HOME) 		%      régle	
+
+	my-binaire : main.o min.o max.o var.o
+                  gcc -o my-binaire main.o var.o min.o max.o
+
+	max.o : max.c
+             gcc -Wall -c max.c
+	min.o : min.c
+             gcc -Wall -c min.c
+	var.o : var.c
+             gcc -Wall -c var.c
+        
+	main.o : main.c
+              gcc -Wall -c main.c
+        
+	clean : rm *.o
+	
+	
+3/
+
+	*Option 1 : make -f lab10_make  		% "-f" pour éxecuter les makefile qui ont un nom différent de makefile ou Makefile
+	
+	Cette option éxecute toutes les commandes écrite dans le make file donc fait la compilation génère l'éxécutable.
+	
+	En réponse dans le terminal sont affichées les commandes écrite dans le makefile.
+	
+	*Option 2 : make -f lab10_makefile install
+	
+	Réponse du terminal :  make: *** Aucune règle pour fabriquer la cible « install ». Arrêt.           % La régle indiqué fait un copier coller et ne fabrique de fichier (donc de cible)
+
+
+	*Option 3 : make -f lab10_makefile min.o
+	Réponse du terminal : make: « min.o » est à jour.		%La règle indiqué crée le fichier min.o donc fabrique la cible. Vu que la cible a dèja été crée alors il nous indique juste qu'elle est à jour.
+
+
+	*Option 4 : make -f lab10_makefile clean
+	Réponse du terminal : make: ***  Aucune règle pour fabriquer la cible « rm », nécessaire pour « clean ». Arrêt.			%La règle écrite supprime les fichier .o donc ne fabrique pas de cible.
+	
+	
+	
+	make avec le nom de la cible  permet de choisir quoi executer (les cibles à éxecuter) dans le make file sans devoir tout refaire. 
+
+	
+
+
+4/
+	Les commandes dans le makefile deviennent :
+	
+	Install : my-binaire
+        	cp my-binaire $(HOME) 
+	CC = gcc
+	OBJ = min.o max.o var.o
+	CC_OPTIONS = -g -Wall
+	my-binaire : main.o ${OBJ}
+        	${CC} -o my-binaire main.o var.o min.o max.o -lm
+
+	max.o : max.c
+             ${CC} ${CC_OPTIONS} -c max.c
+	min.o : min.c
+             ${CC} ${CC_OPTIONS} -c min.c
+	var.o : var.c
+             ${CC} ${CC_OPTIONS} -c var.c
+        
+        main.o : main.c
+             ${CC} ${CC_OPTIONS} -c main.c
+        
+        clean : rm *.o
+        
+5/	
+	make -f lab10_makefile CC_OPTIONS='-g -Wall'
+	
+	Le make file s'éxecute correctement et l'éxecutable crée fonctionne en parfaitement.
+	
+6/
+	Les commandes du makefile deviennent :
+	
+	Install : my-binaire
+	        cp $^ $(HOME) 
+	CC = gcc
+	OBJ = min.o max.o var.o
+	CC_OPTIONS = -g -Wall
+	my-binaire : main.o ${OBJ}
+	        ${CC} -o $@ $^  ${OBJ}
+
+	max.o : max.c
+	        ${CC} ${CC_OPTIONS} -c $^
+	min.o : min.c
+	        ${CC} ${CC_OPTIONS} -c $^ 
+	var.o : var.c
+	        ${CC} ${CC_OPTIONS} -c $^
+	        
+	main.o : main.c
+	        ${CC} ${CC_OPTIONS} -c $^ 
+	        
+	clean : rm *.o
+	
+
+
+7/
+
+	% Rajout de la condition pour le mode debuggage ou le mode release
+
+	Install : my-binaire
+        cp $^ $(HOME) 
+	CC = gcc
+	OBJ = min.o max.o var.o
+	DEBUG =
+
+	ifeq ($(DEBUG),yes)
+	CC_OPTIONS = -g -Wall
+	else
+	CC_OPTIONS =
+	endif
+
+
+	my-binaire : main.o ${OBJ}
+	                ${CC} -o $@ $^  ${OBJ}
+	
+	max.o : max.c
+                ${CC} ${CC_OPTIONS} -c $^
+	min.o : min.c
+	                ${CC} ${CC_OPTIONS} -c $^ 
+	var.o : var.c
+	                ${CC} ${CC_OPTIONS} -c $^
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

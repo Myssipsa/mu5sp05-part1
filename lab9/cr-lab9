@@ -1,0 +1,97 @@
+cr-lab9
+-----------------------------------------------------------------------------------------------------------------------
+
+1/ 
+	commande cp pour copier ce qu'il faut
+	
+2/
+	gcc -fPIC -c max.c min.c var.c 			%Génération des fichiers objets .o
+	
+3/
+	gcc -shared -o libLab9.so max.o min.o var.o		%Création de la bibliothèque 		dynamique et mise des fichier .o à l'intérieur de celle-ci
+	
+4/
+	sudo mv libLab9.so /opt/lib 	
+	
+5/
+	gcc main.c -L/opt/lib -lLab9 -o lab9_execut.exe -lm  %La compilation se fait correctement, 		le fichier executable est générable.
+							       % "-lm" pour la reconaissance des fonctions d'arrondis utilisé dans le code.
+	
+6/
+	./lab9_execut.exe 	
+	Ne s'execute pas ! affiche : ./lab9_execut.exe: error while loading shared libraries: 		libLab9.so: cannot open shared object file: No such file or director
+	
+	% Dans l'éxecutable c'est le soname (lien symbolique) donc sans ce lien l'éditeur de lien dynamique ne pourra pas faire appel à la bibliothèque partagée.
+
+7/
+	printenv LD_LIBRARY_PATH  (ou echo $LD_LIBRARY_PATH) 
+	N'affiche rien !!! 
+	
+8/
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/lib			%Rajout du chemain de ma bibliothèque la variable d'nevironnement LD_LIBRARY_PATH.
+	
+
+9/ 
+	
+	gcc main.c -L/opt/lib -lLab9 -o lab9_execut.exe -lm
+	./lab9_execut.exe
+	
+	Le code s'éxecute correctement.
+	
+10/
+	
+	Le fichier script qui s'éxecute automatiquement lors du démarrage d'un 		nouveau terminal est le .bashrc
+   	Donc on cherche celui-ci sur le bureau ls .bashrc
+   	vim .bashrc
+   	G % pour aller à la derniere ligne 
+   	i
+   	export LD_LIBRARY_PATH= $LD_LIBRARY_PATH:/opt/lib
+   	
+   	Ca marche !
+   	
+   	
+11/ 	
+	locate libm.so 
+ 
+ 	Plusieurs chemain s'affiche !
+ 	
+ 	La librairie est dans cet emplacement : /usr/lib/x86_64-linux-gnu/libm.so
+ 	
+12/	
+	soname : libm.so.6
+ 	nom réel libm.so
+	
+13/     
+	sudo mv libLab9.so /usr/lib
+	chmod a-w libLab9.so
+	
+
+14/	
+	ldconfig     % Créer un fichier cache avec tout les liens mis à jour pour qu'il soit utilisé par le chargeur/editeur de liens ld.so
+
+
+15/
+	ldconfig -p | grep libLab9.so  => libLab9.so (libc6,x86-64) => /lib/libLab9.so
+
+16/
+	ldd libLab9.so => statically linked
+	
+17/	unset LD_LIBRARY_PATH
+	
+	echo $LD_LIBRARY_PATH vide 
+
+
+
+18/
+	gcc main.c -lLab9 -o lab9_execut.exe -lm
+	
+	executable généré
+	
+19/
+
+	Ca marche !
+	
+	
+	
+	
+			
