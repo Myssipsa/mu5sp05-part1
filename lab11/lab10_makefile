@@ -1,0 +1,30 @@
+CC = $(CROSS_COMPILE)gcc
+OBJ = min.o max.o var.o
+DEBUG =
+ifeq ($(DEBUG),yes)
+CC_OPTIONS = -g -Wall
+else 	
+CC_OPTIONS =
+endif
+
+install : my-binaire
+	cp my-binaire $(HOME)/
+my-binaire : main.o ${OBJ}
+	${CC} $^ -o my-binaire -lm 
+ifeq ($(DEBUG),yes)
+	@echo "Mode Debug"
+else 
+	@echo "Mode release"
+endif	
+max.o : max.c 
+		${CC}  ${CC_OPTIONS} -c $^
+min.o : min.c
+		${CC}  ${CC_OPTIONS} -c $^ 
+var.o : var.c
+		${CC}  ${CC_OPTIONS} -c $^
+	
+main.o : main.c
+		${CC} ${CC_OPTIONS} -c $^ 
+	
+clean : 
+	rm *.o
