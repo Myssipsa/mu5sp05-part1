@@ -1,0 +1,83 @@
+cr-lab11
+----------------------------------------------------------------------------------------------------
+
+1/
+	sudo apt install gcc-arm-linux-gnueabi
+	
+2/
+	dpkg -L gcc-arm-linux-gnueabi      
+	
+	Le chemin d'accès au cross compilateur est : /usr/bin/arm-linux-gnueabi-gcc
+	le nom de l'éxecutable est : arm-linux-gnueabi-gcc
+	
+3/
+	vim .bashrc
+	
+	i
+	G
+	
+	export ARCH=arm
+	export CROSS_COMPILE=arm-linux-gnueabi-
+	
+	
+	
+	echo $ARCH
+	arm
+	echo $CROSS_COMPILE
+	arm-linux-gnueabi
+	
+4/
+	On se place sur le Desktop
+
+	ar +TAB
+	
+	Tout est là.
+	
+5/
+
+	Le code devient :
+	
+	
+	CC = gcc
+	OBJ = min.o max.o var.o
+	DEBUG = 
+	
+	ifeq ($(DEBUG),yes)
+	CC_OPTIONS = -g -Wall
+	else
+	CC_OPTIONS = 
+	endif
+	
+	Install : my-binaire
+		cp $^ $(HOME)
+		
+	my-binaire : main.o ${OBJ}
+		  ${CROSS_COMPILE}${CC} $^ -o my-binaire -lm
+	ifeq ($(DEBUG),yes)
+		@echo "Mode Debug"
+	else 
+		@echo "Mode Release"
+	endif
+	
+	max.o : max.c
+		  ${CROSS_COMPILE}${CC} ${CC_OPTIONS} -c $^ 
+	min.o : min.c
+		  ${CROSS_COMPILE}${CC} ${CC_OPTIONS} -c $^
+	var.o : var.c	 
+		  ${CROSS_COMPILE}${CC} ${CC_OPTIONS} -c $^
+	main.o : main.c		  
+		  ${CROSS_COMPILE}${CC} ${CC_OPTIONS} -c $^
+	clean :
+		rm *.o
+		
+6/
+
+	Lors de l'execution du makefile pour la premiere fois, les commandes utilisé sont indiqué et on retrouve la commande de compilation passant par le cross compile. 
+	
+	
+7/
+
+	Le binaire ne s'éxecute pas. On n'a pas d'ARM pour l'executer. ARM n'est pas inclut dans la commande permettant de compiler avec le cross compile.
+	
+	
+	
