@@ -48,18 +48,18 @@ cr-lab12
 	sudo fdisk -l				%fidsk -l : afficher la table de partitions
 	
 	Périphérique Amorçage Début      Fin Secteurs Taille Id Type
-	/dev/sda1              8192 31116287 31108096  14,9G  c W95 FAT32 (LBA)
+	/dev/sdb1              8192 31116287 31108096  14,9G  c W95 FAT32 (LBA)
 	
-	nom sda1
+	nom sdb1
 	
 		
 	
 	dmesg | find /dev/sdb
-	dmesg | find /dev/sda
+	dmesg | find /dev/sdb1
 	
 10/
 
-	umount /dev/sda1
+	umount /dev/sdb1
 	
 11/
 
@@ -72,21 +72,21 @@ cr-lab12
 
 12/
 
-	sudo cfdisk /dev/sda1
+	sudo cfdisk /dev/sdb1
 	
 	table de partition vide Espace libre
 	
 	
 13/
 
-	sudo mkfs.vfat -F 32/dev/sda1 -n boot
+	sudo mkfs.vfat -F 32 /dev/sdb1 -n boot
 	
 14/
 
-	cd /media/$USER/
-	Monté comme 3861-3664
+	Nom de la partition : boot
+	cp pour copier MLO et u-boot.img
+
 	
-	PROBLEME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	
 
 	
