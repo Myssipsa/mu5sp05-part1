@@ -1,0 +1,97 @@
+cr-lab12
+---------------------------------------------------------------------------------------------------------------------
+
+1/
+
+	git clone https://github.com/u-boot/u-boot.git
+	
+2/
+
+	cd u-boot
+	
+	git checkout v2018.05
+	
+3/
+	git branch 
+	
+4/ 
+	cd configs
+	find am335x_boneblack_defconfig
+	am335x_boneblack_defconfig
+
+5/
+	make am335x_boneblack_defconfig 
+	
+	fichier .config présent dans u-boot
+	
+	On retrouve toutes la variables définies et toutes les configurations possibles
+	
+	dans le vim on fait /CONFIG_SYS_PROMPT pour la trouver puis on la modifie 
+	
+6/
+	make
+	
+	find u-boot.img
+	find MLO
+	
+7/
+
+	dmesg | find /dev/sdb
+	
+8/
+
+	mount
+	
+9/
+
+	
+	sudo fdisk -l				%fidsk -l : afficher la table de partitions
+	
+	Périphérique Amorçage Début      Fin Secteurs Taille Id Type
+	/dev/sda1              8192 31116287 31108096  14,9G  c W95 FAT32 (LBA)
+	
+	nom sda1
+	
+		
+	
+	dmesg | find /dev/sdb
+	dmesg | find /dev/sda
+	
+10/
+
+	umount /dev/sda1
+	
+11/
+
+	sudo dd if=/dev/zero of=/dev/peripherique bs=1024 count=1024
+	
+	1024+0 enregistrements lus
+	1024+0 enregistrements écrits
+	1048576 octets (1,0 MB, 1,0 MiB) copiés, 0,00319775 s, 328 MB/s
+
+
+12/
+
+	sudo cfdisk /dev/sda1
+	
+	table de partition vide Espace libre
+	
+	
+13/
+
+	sudo mkfs.vfat -F 32/dev/sda1 -n boot
+	
+14/
+
+	cd /media/$USER/
+	Monté comme 3861-3664
+	
+	PROBLEME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	
+
+	
+
+	
+
+	
+	 

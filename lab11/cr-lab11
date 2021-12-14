@@ -72,7 +72,7 @@ cr-lab11
 		
 6/
 
-	Lors de l'execution du makefile pour la premiere fois, les commandes utilisé sont indiqué et on retrouve la commande de compilation passant par le cross compile. 
+	Lors de l'execution du makefile pour la premiere fois, les commandes utilisé sont indiqué et on retrouve la commande de compilation passant par le cross compilateur. 
 	
 	
 7/

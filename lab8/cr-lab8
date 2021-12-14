@@ -29,6 +29,7 @@ cr-lab8
 		  La valeur max est :19.
 
 7/
+	cd /opt
 	sudo mkdir lib include
 
 8/
